@@ -1,0 +1,56 @@
+# COPY VÀ PASTE TỪNG LỆNH NÀY VÀO TERMINAL
+
+# 1. Di chuyển vào thư mục
+cd /Users/ductampro/Desktop/BTL_KPDL
+
+# 2. Cấp quyền cho script
+chmod +x push_to_ductam_repo.sh
+
+# 3. Chạy script
+./push_to_ductam_repo.sh
+
+# ===============================================
+# NẾU SCRIPT KHÔNG CHẠY, DÙNG LỆNH THỦ CÔNG:
+# ===============================================
+
+# 1. Setup git
+cd /Users/ductampro/Desktop/BTL_KPDL
+git init
+
+# 2. Config user
+git config user.name "Ductam7415vn"
+git config user.email "your-email@example.com"
+
+# 3. Copy README
+cp README_GITHUB.md README.md
+
+# 4. Add files
+git add .
+
+# 5. Commit
+git commit -m "Complete BTL KPDL - Network Intrusion Detection System"
+
+# 6. Add remote
+git remote add origin https://github.com/Ductam7415vn/btl_kpdl.git
+
+# 7. Push (FORCE để override)
+git branch -M main
+git push -u origin main --force
+
+# ===============================================
+# NẾU BỊ LỖI AUTHENTICATION:
+# ===============================================
+
+# 1. Tạo Personal Access Token:
+#    - Vào: https://github.com/settings/tokens
+#    - Generate new token (classic)
+#    - Chọn 'repo' scope
+#    - Copy token
+
+# 2. Khi push, dùng:
+#    Username: Ductam7415vn
+#    Password: [PASTE TOKEN VÀO ĐÂY]
+
+# HOẶC dùng token trong URL:
+git remote set-url origin https://YOUR_TOKEN@github.com/Ductam7415vn/btl_kpdl.git
+git push -u origin main --force

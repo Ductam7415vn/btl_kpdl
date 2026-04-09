@@ -1,0 +1,38 @@
+# COPY VÀ PASTE TỪNG LỆNH NÀY VÀO TERMINAL
+
+# 1. Di chuyển vào thư mục project
+cd /Users/ductampro/Desktop/BTL_KPDL
+
+# 2. Khởi tạo git (nếu chưa có)
+git init
+
+# 3. Cấu hình thông tin (THAY ĐỔI THÀNH THÔNG TIN CỦA BẠN)
+git config user.name "Duc Tam"
+git config user.email "ductam@example.com"
+
+# 4. Copy README
+cp README_GITHUB.md README.md
+
+# 5. Thêm tất cả files
+git add .
+
+# 6. Tạo commit
+git commit -m "Complete BTL KPDL - Network Intrusion Detection System using ML
+
+- Implemented 4 ML algorithms for network intrusion detection
+- Best accuracy: 99.85% with Histogram Gradient Boosting  
+- Dataset: NSL-KDD with 125,973 samples
+- Complete documentation and demo scripts included
+- Full report: 60+ pages with experiments and analysis"
+
+# 7. Thêm remote repository (THAY YOUR_GITHUB_USERNAME)
+# VÍ DỤ: Nếu username là "ductampro" thì link sẽ là:
+# https://github.com/ductampro/BTL_KPDL.git
+
+git remote add origin https://github.com/YOUR_GITHUB_USERNAME/BTL_KPDL.git
+
+# 8. Push lên GitHub
+git push -u origin main
+
+# Nếu lỗi với "main", thử dùng "master":
+# git push -u origin master
